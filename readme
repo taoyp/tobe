@@ -2,3 +2,12 @@
 Java17
 Springboot3.2.4
 Web
+
+
+创建tag
+lxtyp@taoyipingdeMacBook-Pro tobe % git tag v0.1
+查看tag
+lxtyp@taoyipingdeMacBook-Pro tobe % git tag
+v0.1
+push tag
+lxtyp@taoyipingdeMacBook-Pro tobe % git push origin v0.1
