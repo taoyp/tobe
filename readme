@@ -1,8 +1,11 @@
+tag v0.2===============================================
+增加HiController
+sayHi
+tag v0.1===============================================
 20240412 新创建项目
 Java17
 Springboot3.2.4
 Web
-
 
 创建tag
 lxtyp@taoyipingdeMacBook-Pro tobe % git tag v0.1
