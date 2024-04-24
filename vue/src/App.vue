@@ -4,12 +4,18 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/HelloWorld.vue';
+import api from '@/config/api'
 
 export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  created() {
+    api.get('/rest/v2/user/id?userId=admin').then(res => {
+      console.log(res);
+    });
   }
 }
 </script>
