@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <el-button type="primary">Primary</el-button>
+    <el-button type="primary" @click="primaryClick">Primary</el-button>
     <h1>{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
@@ -36,6 +36,12 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  methods: {
+    primaryClick() {
+      console.log(this.$router)
+      this.$router.push("/init")
+    }
   }
 }
 </script>

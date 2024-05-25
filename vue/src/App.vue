@@ -1,32 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <nav>
+      <!-- 这里可以放置导航链接，使用<router-link>组件 -->
+      <router-link to="/">Home</router-link>
+      <!-- 其他导航链接... -->
+    </nav>
+
+    <!-- 路由匹配到的组件将渲染在这里 -->
+    <router-view/>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
-import api from '@/config/api'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  },
-  created() {
-    api.get('/rest/v2/user/id?userId=admin').then(res => {
-      console.log(res);
-    });
-  }
+  name: 'App'
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+/* 你的样式 */
 </style>
