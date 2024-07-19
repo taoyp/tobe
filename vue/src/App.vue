@@ -1,19 +1,15 @@
 <template>
   <div id="app">
-    <nav>
-      <!-- 这里可以放置导航链接，使用<router-link>组件 -->
-      <router-link to="/">Home</router-link>
-      <!-- 其他导航链接... -->
-    </nav>
-
-    <!-- 路由匹配到的组件将渲染在这里 -->
-    <router-view/>
+    <pjt-screen/>
   </div>
 </template>
 
 <script>
+import PjtScreen from "@/page/screen/pjtScreen.vue";
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {PjtScreen}
 }
 </script>
 

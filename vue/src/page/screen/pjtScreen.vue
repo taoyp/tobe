@@ -1,16 +1,16 @@
 <template>
-  <img alt="Vue logo" src="../assets/logo.png">
-  <HelloWorld v-if="currPath==='/home'" msg="Welcome to Your Vue.js App"/>
+  <is-header @move="gotoNewPage"/>
+  <router-view/>
 </template>
 
 <script>
-import HelloWorld from '../components/HelloWorld.vue';
 import api from '@/config/api';
+import IsHeader from "@/page/screen/isHeader.vue";
 
 export default {
-  name: 'App',
+  name: 'pjt-screen',
   components: {
-    HelloWorld
+    IsHeader
   },
   created() {
     api.get('/rest/v1/hi').then(res => {
@@ -19,11 +19,7 @@ export default {
   },
   computed: {
     currPath() {
-      let path = "/home";
-      if (this.$router && this.$router.currentRoute && this.$router.currentRoute.path) {
-        path = this.$router.currentRoute.path;
-      }
-      return path;
+      return this.$router.currentRoute.path;
     }
   },
   methods: {
